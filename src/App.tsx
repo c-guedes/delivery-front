@@ -3,6 +3,8 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { ToastProvider } from './contexts/ToastContext';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Navbar from './components/Navbar';
+import HealthCheck from './components/HealthCheck';
+import Footer from './components/Footer';
 import Checkout from './pages/Checkout';
 import Login from './pages/Login';
 import CustomerSignup from './pages/CustomerSignup';
@@ -10,6 +12,7 @@ import DeliverySignup from './pages/DeliverySignup';
 import CustomerDashboard from './pages/customer/Dashboard';
 import DeliveryDashboard from './pages/delivery/Dashboard';
 import AdminDashboard from './pages/admin/Dashboard';
+import HealthStatusPage from './pages/HealthStatus';
 
 // Componente interno que usa o contexto
 function AppContent() {
@@ -77,8 +80,14 @@ function AppContent() {
             <Route path="/signup/delivery" element={
               !isAuthenticated ? <DeliverySignup /> : <Navigate to="/" replace />
             } />
+            
+            {/* Rota pública para health status */}
+            <Route path="/health-status" element={<HealthStatusPage />} />
           </Routes>
         </main>
+        
+        {/* Footer */}
+        <Footer />
       </div>
     </Router>
   );
@@ -90,6 +99,7 @@ function App() {
       <AuthProvider>
         <ToastProvider>
           <AppContent />
+          <HealthCheck />
         </ToastProvider>
       </AuthProvider>
     </ThemeProvider>
