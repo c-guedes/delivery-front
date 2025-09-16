@@ -3,7 +3,6 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { ToastProvider } from './contexts/ToastContext';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Navbar from './components/Navbar';
-import HealthCheck from './components/HealthCheck';
 import Footer from './components/Footer';
 import Checkout from './pages/Checkout';
 import Login from './pages/Login';
@@ -99,7 +98,6 @@ function App() {
       <AuthProvider>
         <ToastProvider>
           <AppContent />
-          <HealthCheck />
         </ToastProvider>
       </AuthProvider>
     </ThemeProvider>

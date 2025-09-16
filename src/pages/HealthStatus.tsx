@@ -52,10 +52,8 @@ const HealthStatusPage: React.FC = () => {
             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
               Live Status Monitor
             </h2>
-            <div className="relative">
-              {/* O componente HealthCheck será renderizado aqui */}
-              <HealthCheck />
-            </div>
+            {/* O componente HealthCheck renderiza o monitor aqui */}
+            <HealthCheck />
           </div>
 
           <div className="mt-8 bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
