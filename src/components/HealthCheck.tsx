@@ -135,11 +135,6 @@ const HealthCheck: React.FC = () => {
           <p className="text-gray-600 dark:text-gray-300 text-sm">
             Backend services and API endpoints
           </p>
-          <div className="mt-4">
-            <div className="text-xs text-gray-500 dark:text-gray-400">
-              Endpoint: {import.meta.env.VITE_API_BASE_URL}/health
-            </div>
-          </div>
         </div>
 
         {/* Database Status */}
@@ -156,11 +151,6 @@ const HealthCheck: React.FC = () => {
           <p className="text-gray-600 dark:text-gray-300 text-sm">
             PostgreSQL database connectivity
           </p>
-          <div className="mt-4">
-            <div className="text-xs text-gray-500 dark:text-gray-400">
-              Endpoint: {import.meta.env.VITE_API_BASE_URL}/health/database
-            </div>
-          </div>
         </div>
       </div>
 
