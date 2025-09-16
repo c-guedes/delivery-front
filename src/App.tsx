@@ -43,7 +43,7 @@ function AppContent() {
     <Router>
       <div className="min-h-screen bg-gray-100 dark:bg-dark-900 transition-colors">
         {/* Mostrar Navbar apenas se estiver autenticado */}
-        {isAuthenticated && <Navbar userType={user?.type} />}
+        {isAuthenticated && <Navbar userType={user?.type ?? null} />}
         <main>
           <Routes>
             {/* Rota principal - redireciona para o dashboard apropriado */}
